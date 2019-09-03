@@ -111,12 +111,22 @@ mouseColorScroll.forEach(item =>{
 })
 
 
+//stopProgagation()
+const destinationBackgroundToggle = document.querySelector('.content-pick');
+console.log(destinationBackgroundToggle);
+destinationBackgroundToggle.addEventListener('click', e=>{
+    destinationBackgroundToggle.style.backgroundColor = 'pink';
+})
+
+
+
 //mousedown mouseup
 
 const destinationMouseDown = document.querySelectorAll('.destination');
 destinationMouseDown.forEach(item =>{
     item.addEventListener('mousedown', e=>{
         item.style.backgroundColor = 'yellow';
+        e.stopPropagation();
     })
 })
 
@@ -124,6 +134,7 @@ const destinationMouseUp = document.querySelectorAll('.destination');
 destinationMouseUp.forEach(item =>{
     item.addEventListener('mouseup', e=>{
         item.style.backgroundColor = 'white';
+        e.stopPropagation();
     })
 })
 
