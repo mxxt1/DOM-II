@@ -111,8 +111,21 @@ mouseColorScroll.forEach(item =>{
 })
 
 
+//mousedown mouseup
 
+const destinationMouseDown = document.querySelectorAll('.destination');
+destinationMouseDown.forEach(item =>{
+    item.addEventListener('mousedown', e=>{
+        item.style.backgroundColor = 'yellow';
+    })
+})
 
+const destinationMouseUp = document.querySelectorAll('.destination');
+destinationMouseUp.forEach(item =>{
+    item.addEventListener('mouseup', e=>{
+        item.style.backgroundColor = 'white';
+    })
+})
 
 //focus
 
