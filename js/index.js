@@ -96,22 +96,21 @@ contentImgLeave.forEach(item =>{
 
 //scroll --> TODO: fix scroll
 
-// const mouseColorScroll = document.querySelectorAll('h2,p,h4');
-// mouseColorScroll.forEach(item =>{
-//     item.addEventListener('scroll', e =>{
-//         item.style.color = 'green';
-//     })
-// })
-
 const mouseColorScroll = document.querySelectorAll('h2,p,h4');
 mouseColorScroll.forEach(item =>{
+    item.addEventListener('scroll', e =>{
+        item.style.backgroundColor = 'pink';
+    })
+})
+
+const mouseColorWheel = document.querySelectorAll('h2,p,h4');
+mouseColorWheel.forEach(item =>{
     item.addEventListener('wheel', e =>{
         item.style.color = 'green';
     })
 })
 
-
-//stopProgagation()
+//nest two events and use stopPropagation()
 const destinationBackgroundToggle = document.querySelector('.content-pick');
 console.log(destinationBackgroundToggle);
 destinationBackgroundToggle.addEventListener('click', e=>{
@@ -119,9 +118,7 @@ destinationBackgroundToggle.addEventListener('click', e=>{
 })
 
 
-
-//mousedown mouseup
-
+//mousedown
 const destinationMouseDown = document.querySelectorAll('.destination');
 destinationMouseDown.forEach(item =>{
     item.addEventListener('mousedown', e=>{
@@ -130,6 +127,7 @@ destinationMouseDown.forEach(item =>{
     })
 })
 
+//mouseup
 const destinationMouseUp = document.querySelectorAll('.destination');
 destinationMouseUp.forEach(item =>{
     item.addEventListener('mouseup', e=>{
@@ -138,27 +136,10 @@ destinationMouseUp.forEach(item =>{
     })
 })
 
-//focus
-
-
-
-//resize
-
-//mousedown
-
-//select
-
-//drag/drop
-
-//nest two events and use stopPropagation();
-
-
-
 //prevent nav from refreshing page using preventDefault();
-
 const navStop = document.querySelectorAll('.nav-link');
 navStop.forEach(item =>{
-    navStop.addEventListener('click', e=>{
+    item.addEventListener('click', e=>{
         console.log(`nav link clicked and normal behavior stopped`);
         e.preventDefault();
     })
