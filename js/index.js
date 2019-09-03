@@ -94,10 +94,29 @@ contentImgLeave.forEach(item =>{
     })
 })
 
-//scroll
+//scroll --> TODO: fix scroll
+
+// const mouseColorScroll = document.querySelectorAll('h2,p,h4');
+// mouseColorScroll.forEach(item =>{
+//     item.addEventListener('scroll', e =>{
+//         item.style.color = 'green';
+//     })
+// })
+
+const mouseColorScroll = document.querySelectorAll('h2,p,h4');
+mouseColorScroll.forEach(item =>{
+    item.addEventListener('wheel', e =>{
+        item.style.color = 'green';
+    })
+})
+
+
+
 
 
 //focus
+
+
 
 //resize
 
@@ -106,6 +125,23 @@ contentImgLeave.forEach(item =>{
 //select
 
 //drag/drop
+
+//nest two events and use stopPropagation();
+
+
+
+//prevent nav from refreshing page using preventDefault();
+
+const navStop = document.querySelectorAll('.nav-link');
+navStop.forEach(item =>{
+    navStop.addEventListener('click', e=>{
+        console.log(`nav link clicked and normal behavior stopped`);
+        e.preventDefault();
+    })
+    
+
+})
+
 
 
 
