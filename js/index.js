@@ -147,8 +147,13 @@ navStop.forEach(item =>{
 
 })
 
-
-
+const scrollDown = document.querySelectorAll('div');
+scrollDown.forEach(item =>{
+    item.addEventListener('wheel', e=>{
+        console.log(`scrolled over div`);
+        item.style.backgroundColor = 'orange';
+    })
+})
 
 
 
